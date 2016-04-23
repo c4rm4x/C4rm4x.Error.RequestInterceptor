@@ -1,0 +1,35 @@
+{
+  "name": "errorinterceptor",
+  "version": "1.0.0",
+  "description": "Error interceptor to process response errors when invoking WebApi actions",
+  "main": "src/angular-errors.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/c4rm4x/C4rm4x.Error.RequestInterceptor.git"
+  },
+  "keywords": [
+    "angular",
+    "error",
+    "interceptor",
+    "processor"
+  ],
+  "author": "]C4rM4X[",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/c4rm4x/C4rm4x.Error.RequestInterceptor/issues"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jasmine": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "dependencies": {
+    "grunt-cli": "^1.2.0"
+  }
+}
