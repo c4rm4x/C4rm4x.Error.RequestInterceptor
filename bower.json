@@ -1,6 +1,6 @@
 {
   "name": "errorinterceptor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Error interceptor to process response errors when invoking WebApi actions",
   "main": "src/angular-errors.js",
   "authors": [

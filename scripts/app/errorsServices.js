@@ -21,8 +21,10 @@ errorsServices.service('errorsConfig', [function(){
 	};
 }]);
 
-errorsServices.service('errorsLogger', ['$http', 'errorsConfig',
-	function($http, Config){
+errorsServices.service('errorsLogger', ['$injector', 'errorsConfig',
+	function($injector, Config){
+
+	this.http;
 
 	this.log = function(response){
 		if (!Config.getConfiguration().log) 
@@ -31,14 +33,16 @@ errorsServices.service('errorsLogger', ['$http', 'errorsConfig',
 		if (Config.getConfiguration().apiEndPoint === response.config.url) 
 			return;
 
-		return $http.post(
+		this.http = this.http || $injector.get('$http');
+
+		return this.http.post(
 			Config.getConfiguration().apiEndPoint, {
 				error: JSON.stringify(response.data),
 				appIdentifier: Config.getConfiguration().app
 			}
 		);
 	};	
-}])
+}]);
 
 errorsServices.service('forbiddenRequestProcessor', [function() {
 
